@@ -1,5 +1,12 @@
-#root, html, body {
+#root,
+html,
+body {
     height: 100vh;
+    background-image: url('../src/assets/Fluid-10s-1536px.svg');
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: cover;
+    width: 100vw;
 }
 
 body {
@@ -13,4 +20,20 @@ body {
 
 html {
     scroll-behavior: smooth;
+}
+
+.emailID {
+    font-family: 'Fira Code', monospace;
+    font-size: 3vh;
+}
+
+.title {
+    font-family: 'Fira Code', monospace;
+    margin-left: -10px;
+    font-size: 4vh;
+    font-weight: bold;
+}
+
+.text-normal {
+    font-family: 'Cormorant Garamond', serif;
 }

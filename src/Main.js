@@ -6,29 +6,12 @@ import Home from "./components/Authentication/Home";
 import Login from "./components/Authentication/Login";
 import Signup from "./components/Authentication/Signup";
 import ProtectedRoute from "./components/Authentication/ProtectedRoute";
+import OpenArticle from './components/History/Open'
 import { UserAuthContextProvider } from "./context/UserContext";
-// const NavigationController=()=>{
-//   let routes = useRoutes([
-//     {path:"/",element:<Login/>},
-//     {path:"/home",element:<ProtectedRoute><Home/></ProtectedRoute>},
-//     {path:"/signup",element:<Signup/>}
-//   ])
-//   return routes;
-// };
+import {AppBar,Typography,Toolbar,Button} from '@material-ui/core'
 function Main() {
   return (
-    // <Container style={{ width: "400px" }}>
-    //   <Row>
-    //     <Col>
-    //       <UserAuthContextProvider>
-    //         <Router>
-    //           <NavigationController/>
-    //         </Router>
-    //       </UserAuthContextProvider>
-    //     </Col>
-    //   </Row>
-    // </Container>
-    <Container style={{ width: "400px" }}>
+    // <Container style={{ width: "100vw" }}>
       <Row>
         <Col>
           <UserAuthContextProvider>
@@ -43,11 +26,12 @@ function Main() {
               />
               <Route path="/" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/openarticles" element={<OpenArticle />} />
             </Routes>
           </UserAuthContextProvider>
         </Col>
       </Row>
-    </Container>
+  //  </Container>
   );
 }
 

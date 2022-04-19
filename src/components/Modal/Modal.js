@@ -1,8 +1,7 @@
 import React from 'react';
-import { Typography, Divider, Chip, TextField, Button } from '@material-ui/core';
+import { Typography, Divider, Chip, TextField, Button,Grid } from '@material-ui/core';
 import SimpleModal from '@material-ui/core/Modal';
 import emailjs from 'emailjs-com';
-
 import useStyles from './styles';
 
 const Modal = ({ isOpen, setIsOpen, showFeedback }) => {
@@ -38,8 +37,8 @@ const Modal = ({ isOpen, setIsOpen, showFeedback }) => {
         <Typography variant="h3">Instructions</Typography>
         <Divider />
         <div className={classes.infoContainer}>
-          <Typography variant="h5">News by Categories</Typography>
-          <div className={classes.chipContainer}>{['Business', 'Entertainment', 'General', 'Health', 'Science', 'Sports', 'Technology'].map((category) => <Chip label={category} color="primary" className={classes.chip} />)}</div>
+          <Typography variant="h5">Categories</Typography>
+          <div className={classes.chipContainer}>{['Business', 'General', 'Health', 'Science', 'Sports', 'Technology'].map((category) => <Chip label={category} color="primary" className={classes.chip} />)}</div>
         </div>
         <Typography variant="body1" className={classes.trySaying}>Try saying: &quot;Give me the latest <strong><em>Business</em></strong> news&quot;</Typography>
         <Divider />
